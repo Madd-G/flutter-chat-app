@@ -1,9 +1,9 @@
-import 'package:chat/screens/registration_screen.dart';
+import 'package:chat/screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
-  static const routeName = 'welcomeScreen'; // route name
+  static const routeName = 'Welcome Screen'; // route name
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +55,7 @@ class WelcomeScreen extends StatelessWidget {
             child: MaterialButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(
-                    context, RegistrationScreen.routeName);
+                    context, HomeScreen.routeName);
               },
               minWidth: screenWidth * 0.8,
               height: screenHeight * 0.085,

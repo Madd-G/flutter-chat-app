@@ -1,4 +1,4 @@
-import 'package:chat/screens/chat_screen.dart';
+import 'package:chat/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class AddPhotoScreen extends StatelessWidget {
@@ -69,7 +69,7 @@ class AddPhotoScreen extends StatelessWidget {
               right: 25.0,
               bottom: 25.0,
               child: GestureDetector(
-                onTap: (){Navigator.pushNamed(context, ChatScreen.routeName );},
+                onTap: (){Navigator.pushNamed(context, WelcomeScreen.routeName );},
                 child: Text(
                   "Skip",
                   style: TextStyle(color: Colors.grey, fontSize: 20.0),

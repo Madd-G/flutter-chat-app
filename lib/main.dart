@@ -26,7 +26,7 @@ class ChatApp extends StatelessWidget {
 //          textTheme: TextTheme(
 //            bodyText2: TextStyle(color: Colors.black),
 //        ),
-      initialRoute: HomeScreen.routeName,
+      initialRoute: LoginScreen.routeName,
       routes: {
 
         WelcomeScreen.routeName: (context) => WelcomeScreen(),

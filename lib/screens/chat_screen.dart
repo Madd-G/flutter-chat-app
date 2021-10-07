@@ -100,7 +100,7 @@ class _ChatScreenState extends State<ChatScreen>
                       decoration: kMessageTextFieldDecoration,
                     ),
                   ),
-                  FlatButton(
+                  TextButton(
                     onPressed: () {
                       messageTextController.clear();
                       _firestore.collection('messages').add(
@@ -145,9 +145,10 @@ class MessageStream extends StatelessWidget {
         final messages = snapshot.data.docs;
         List<MessageBubble> messageWidgets = [];
         for (var message in messages) {
-          final messageText = message.data()['text'];
-          final messageSender = message.data()['sender'];
-          final messageTime = message.data()['timestamp'];
+          // final messageData = message.data();
+          final messageText = message['text'];
+          final messageSender = message['sender'];
+          final messageTime = message['timestamp'];
 
           final currentUser = loggedInUser.email;
 

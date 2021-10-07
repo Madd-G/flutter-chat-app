@@ -97,11 +97,12 @@ class _VerificationScreenState extends State<VerificationScreen>
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: PinCodeTextField(
+                      appContext: context,
                       length: 4,
                       animationType: AnimationType.fade,
                       animationDuration: Duration(milliseconds: 300),
                       autoDismissKeyboard: true,
-                      textInputType: TextInputType.number,
+                      keyboardType: TextInputType.number,
                       pinTheme: PinTheme(
                         shape: PinCodeFieldShape.underline,
                         activeColor: Colors.blueAccent,
@@ -143,9 +144,7 @@ class _VerificationScreenState extends State<VerificationScreen>
                       style: TextStyle(fontSize: 17.0),
                     ),
                     GestureDetector(
-                      onTap: (){
-
-                      },
+                      onTap: () {},
                       child: Text(
                         "Request again",
                         style: TextStyle(
