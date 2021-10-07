@@ -1,0 +1,31 @@
+name: chat
+description: A new Flutter application.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons:
+  animated_text_kit:
+  firebase_core:
+  firebase_auth:
+  cloud_firestore:
+  modal_progress_hud:
+  double_back_to_close_app: ^2.0.1
+  provider: ^5.0.0
+  pin_code_fields: ^7.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - images/

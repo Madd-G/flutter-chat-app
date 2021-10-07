@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "66975677201",
+    "firebase_url": "https://chat-94587.firebaseio.com",
+    "project_id": "chat-94587",
+    "storage_bucket": "chat-94587.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66975677201:android:8d21a4653f136f58702ab0",
+        "android_client_info": {
+          "package_name": "com.alamsyah.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66975677201-fkudolcj7pmib78tbe1o7lm32mqg1qd0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7ei1N2NQOuu4bA94Eq4d4sn2r5XvHZwU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66975677201-fkudolcj7pmib78tbe1o7lm32mqg1qd0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
