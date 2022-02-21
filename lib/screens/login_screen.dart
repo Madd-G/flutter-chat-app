@@ -1,3 +1,4 @@
+import 'package:chat/screens/home_screen.dart';
 import 'package:chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:chat/components/rounded_button.dart';
@@ -157,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen>
                       await FirebaseAuth.instance.signInWithEmailAndPassword(
                           email: email, password: password);
                       await Navigator.pushReplacementNamed(
-                          context, ChatScreen.routeName);
+                          context, HomeScreen.routeName);
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
                         print('No user found for that email.');
