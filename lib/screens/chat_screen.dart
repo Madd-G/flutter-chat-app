@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:chat/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/rendering.dart';
 
 final _firestore = FirebaseFirestore.instance;
 User loggedInUser;
@@ -11,6 +10,7 @@ User loggedInUser;
 class ChatScreen extends StatefulWidget {
   static const routeName = 'Chat Screen';
   final Users users;
+
   ChatScreen({this.users});
 
   @override
@@ -64,9 +64,11 @@ class _ChatScreenState extends State<ChatScreen>
 //      backgroundColor: Color(0xFFEFF0F4),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: (){
-          Navigator.pop(context);
-        }),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
         flexibleSpace: Row(
           children: [
 //            CircleAvatar(
@@ -189,11 +191,12 @@ class MessageBubble extends StatelessWidget {
         crossAxisAlignment:
             isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          isMe ? SizedBox():
-          Text(
-            sender,
-            style: TextStyle(color: Colors.grey, fontSize: 12),
-          ),
+          isMe
+              ? SizedBox()
+              : Text(
+                  sender,
+                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 6.0),
             child: Material(
@@ -205,7 +208,7 @@ class MessageBubble extends StatelessWidget {
                       topLeft: Radius.circular(10.0),
                       bottomLeft: Radius.circular(10.0))
                   : BorderRadius.only(
-                topLeft: Radius.circular(10.0),
+                      topLeft: Radius.circular(10.0),
                       topRight: Radius.circular(10.0),
                       bottomRight: Radius.circular(10.0),
                     ),

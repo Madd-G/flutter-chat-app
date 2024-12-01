@@ -28,7 +28,6 @@ class ChatApp extends StatelessWidget {
 //        ),
       initialRoute: LoginScreen.routeName,
       routes: {
-
         WelcomeScreen.routeName: (context) => WelcomeScreen(),
         RegistrationScreen.routeName: (context) => RegistrationScreen(),
         VerificationScreen.routeName: (context) => VerificationScreen(),

@@ -55,7 +55,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   email = value;
                 },
                 decoration:
-                kTextFieldDecoration.copyWith(hintText: 'Email address'),
+                    kTextFieldDecoration.copyWith(hintText: 'Email address'),
               ),
               SizedBox(
                 height: 8.0,
@@ -79,36 +79,36 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 height: 24.0,
               ),
               RoundedButton(
-                  title: 'Register',
-                  colour: Colors.blueAccent,
-                  onPressed: () async {
+                title: 'Register',
+                colour: Colors.blueAccent,
+                onPressed: () async {
+                  setState(
+                    () {
+                      showSpinner = true;
+                    },
+                  );
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email, password: password);
+                    if (newUser != null)
+                      Navigator.pushNamed(
+                          context, VerificationScreen.routeName);
                     setState(
-                          () {
-                        showSpinner = true;
+                      () {
+                        showSpinner = false;
                       },
                     );
-                    try {
-                      final newUser =
-                      await _auth.createUserWithEmailAndPassword(
-                          email: email, password: password);
-                      if (newUser != null)
-                        Navigator.pushNamed(
-                            context, VerificationScreen.routeName);
-                      setState(
-                            () {
-                          showSpinner = false;
-                        },
-                      );
-                    } catch (e) {
-                      print(e);
-                    } finally {
-                      setState(
-                            () {
-                          showSpinner = false;
-                        },
-                      );
-                    }
-                  }),
+                  } catch (e) {
+                    print(e);
+                  } finally {
+                    setState(
+                      () {
+                        showSpinner = false;
+                      },
+                    );
+                  }
+                },
+              ),
               Row(
                 children: [
                   Text('Have an account?'),
